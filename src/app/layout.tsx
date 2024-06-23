@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Roboto_Flex } from "next/font/google";
-import "../styles/global.scss";
 import { Header } from "@/common/components/layout/header/header";
 import { Footer } from "@/common/components/layout/footer/footer";
+import "../styles/global.scss";
 
 const robotFlex = Roboto_Flex({
   weight: ["400", "500", "700"],
@@ -22,9 +22,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        <link rel="icon" href="/src/common/media/logo/logo.svg" />
-      </head>
       <body className={robotFlex.className}>
         <Header />
         {children}

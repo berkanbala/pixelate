@@ -1,6 +1,9 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import dynamic from "next/dynamic";
 
-export default function Home() {
-  return <main className={styles.main}>merhaba</main>;
+const Home = dynamic(() => import("../custom/component/home/home"), {
+  ssr: false,
+});
+
+export default function Index() {
+  return <Home />;
 }

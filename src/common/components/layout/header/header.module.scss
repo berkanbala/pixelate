@@ -1,2 +1,32 @@
 .container {
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 25px;
+  padding: 50px 50px 0px 70px;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  gap: 20px;
+  padding: 0 10px;
+  margin-top: 20px;
+  align-items: center;
+  flex-wrap: wrap;
+
+  .pages {
+    display: flex;
+
+    .link {
+      margin-right: 16px;
+      border-radius: 16px;
+      background-color: #0c0e0f;
+      padding: 16px;
+      color: #fff;
+      cursor: pointer;
+
+      &:last-child {
+        margin-right: 20px;
+        background-color: #294dfa;
+      }
+    }
+  }
 }
