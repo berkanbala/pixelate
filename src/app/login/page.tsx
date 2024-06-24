@@ -1,5 +1,5 @@
-import PostPage from "@/pages/postpage/postpage";
+import AllModals from "@/common/modals/allModals/allModals";
 
 export default function Index() {
-  return <PostPage />;
+  return <AllModals />;
 }
