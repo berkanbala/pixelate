@@ -1,8 +1,4 @@
-import dynamic from "next/dynamic";
-
-const Home = dynamic(() => import("../custom/component/home/home"), {
-  ssr: false,
-});
+import Home from "@/pages/home/home";
 
 export default function Index() {
   return <Home />;
