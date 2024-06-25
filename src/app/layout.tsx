@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import { Roboto_Flex } from "next/font/google";
 import { Header } from "@/common/components/layout/header/header";
-import "../styles/global.scss";
+import { AppContext } from "@/common/context/appContext";
 import Footer from "@/common/components/layout/footer/footer";
+import AllModals from "@/common/modals/allModals/allModals";
+import "../styles/global.scss";
 
 const robotFlex = Roboto_Flex({
   weight: ["400", "500", "700"],
@@ -23,9 +25,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={robotFlex.className}>
-        <Header />
-        {children}
-        <Footer className="" />
+        <AppContext>
+          <AllModals />
+          <Header className="" />
+          {children}
+          <Footer className="" />
+        </AppContext>
       </body>
     </html>
   );

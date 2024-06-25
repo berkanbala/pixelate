@@ -1,15 +1,10 @@
 "use client";
 
-import { useParams } from "next/navigation";
 import styles from "./postPageDetail.module.scss";
 import { IPost } from "@/common/models/post";
 import { useEffect, useState } from "react";
-import { useRouter } from "next/router";
 
-// eslint-disable-next-line @next/next/no-async-client-component
 export default function PostPageDetail({ id }: { id: string }) {
-  //   const { id } = props;
-
   const [posts, setPosts] = useState<IPost>({} as IPost);
 
   useEffect(() => {

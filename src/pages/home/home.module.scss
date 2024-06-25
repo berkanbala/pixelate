@@ -1,2 +1,22 @@
 .container {
+  align-content: center;
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+  min-height: calc(100vh - 130px);
+
+  .content {
+    display: flex;
+  }
+
+  ul {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 30px 0px;
+
+    li {
+      margin-top: 5px;
+      background-color: bisque;
+    }
+  }
 }

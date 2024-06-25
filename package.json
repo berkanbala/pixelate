@@ -12,17 +12,18 @@
     "axios": "^1.7.2",
     "classnames": "^2.5.1",
     "next": "14.2.4",
-    "react": "^18",
-    "react-dom": "^18",
-    "react-router": "^6.23.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router": "^6.24.0",
+    "react-toastify": "^10.0.5",
     "sass": "^1.77.6"
   },
   "devDependencies": {
-    "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "eslint": "^8",
+    "@types/node": "^20.14.8",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "eslint": "^9.5.0",
     "eslint-config-next": "14.2.4",
-    "typescript": "^5"
+    "typescript": "^5.5.2"
   }
 }

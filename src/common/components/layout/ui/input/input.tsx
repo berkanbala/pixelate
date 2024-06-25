@@ -1,6 +1,7 @@
+import classNames from "classnames";
 import styles from "./input.module.scss";
 
-export const Input = (props: Props) => {
+export const Input = (props: any) => {
   const {
     type,
     className,
@@ -11,34 +12,21 @@ export const Input = (props: Props) => {
     placeholder,
     required,
     value,
+    text,
   } = props;
   return (
-    <div className={styles.container}>
-      <div className={styles.inputWrapper}>
-        <input
-          readOnly={readOnly}
-          required={required}
-          onChange={onChange}
-          value={value}
-          type={type}
-          placeholder={placeholder}
-          disabled={disabled}
-          name={name}
-          className={className}
-        />
-      </div>
-    </div>
+    <input
+      readOnly={readOnly}
+      required={required}
+      onChange={onChange}
+      value={value}
+      type={type}
+      placeholder={placeholder}
+      disabled={disabled}
+      name={name}
+      className={classNames(styles.container, className)}
+    >
+      {text}
+    </input>
   );
 };
-
-interface Props {
-  readOnly?: boolean;
-  required?: any;
-  name?: string;
-  type: string;
-  value?: any;
-  disabled?: boolean;
-  className?: any;
-  placeholder?: string;
-  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
-}
