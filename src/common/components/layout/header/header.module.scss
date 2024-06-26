@@ -10,6 +10,7 @@
   align-items: center;
   flex-wrap: wrap;
   background-color: aqua;
+  box-shadow: 0 4px 15px 0 rgb(98 96 101 / 75%);
 
   .pages {
     display: flex;
@@ -24,10 +25,12 @@
       align-items: center;
 
       .link {
+        display: flex;
+        width: 70px;
         margin-right: 16px;
         border-radius: 16px;
         background-color: #0c0e0f;
-        padding: 16px;
+        padding: 13px;
         color: #fff;
         cursor: pointer;
       }

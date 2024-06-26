@@ -8,6 +8,7 @@ import { getInitalFormValues } from "@/common/shared/initialValues";
 import Image from "next/image";
 import IconX from "../../media/logo/x.png";
 import styles from "./signInModal.module.scss";
+import { notify } from "@/common/configs/notify";
 
 export default function SigninModal() {
   const { modals, user } = useAppContext();
@@ -19,11 +20,13 @@ export default function SigninModal() {
     if (!validateForm(form)) {
       return;
     }
+    notify("success", "basarili bir sekilde giris yaptiniz", {
+      position: "top-right",
+    });
+    console.log(notify);
 
     user.setUsers(form.email);
-
     resetForm(); // Formu sıfırla
-
     user.setAuth(true);
     modals.setSigninModalVisible(false);
   };
@@ -47,7 +50,7 @@ export default function SigninModal() {
             type="text"
             name="email"
             value={form.email}
-            placeholder="email"
+            placeholder="Email"
             required
             onChange={setForm}
           />
@@ -55,7 +58,7 @@ export default function SigninModal() {
             type="password"
             name="password"
             value={form.password}
-            placeholder="password"
+            placeholder="Password"
             required
             onChange={setForm}
           />

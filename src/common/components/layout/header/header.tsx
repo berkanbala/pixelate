@@ -5,6 +5,7 @@ import Image from "next/image";
 import Logo from "@/common/media/logo/logo.svg";
 import classNames from "classnames";
 import { useAppContext } from "@/common/context/appContext";
+import { notify } from "@/common/configs/notify";
 
 export const Header = (props: Props) => {
   const { className } = props;
@@ -17,18 +18,22 @@ export const Header = (props: Props) => {
     user.setAuth(false);
     user.setUsers("");
     user.setPass("");
+
+    notify("success", "başarılı bir şekilde çıkış yapıldı", {
+      position: "top-right",
+    });
   };
 
   return (
     <div className={classNames(className, styles.container)}>
-      <div className={styles.image}>
+      <Link href="/">
         <Image alt="logo" src={Logo} />
-      </div>
+      </Link>
       <div className={styles.pages}>
         <ul>
           <li>
             <Link className={styles.link} href="/">
-              home
+              Home
             </Link>
           </li>
           <ul className={styles.itemx} style={{ marginRight: "40px" }}>
@@ -36,13 +41,13 @@ export const Header = (props: Props) => {
               <li className={styles.dropdown}>
                 <div className={styles.dropbtn}>{user.users}</div>
                 <div className={styles.dropdowncontent}>
-                  <span onClick={handleExit}>logout</span>
+                  <span onClick={handleExit}>Logout</span>
                 </div>
               </li>
             ) : (
               <li className={styles.dropdown}>
                 <div className={styles.dropbtnx} onClick={handleModal}>
-                  login
+                  Login
                 </div>
               </li>
             )}

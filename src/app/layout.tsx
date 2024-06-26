@@ -5,6 +5,8 @@ import { AppContext } from "@/common/context/appContext";
 import Footer from "@/common/components/layout/footer/footer";
 import AllModals from "@/common/modals/allModals/allModals";
 import "../styles/global.scss";
+import { ToastContainer } from "react-toastify";
+import ToastProvider from "@/common/context/toastProvider";
 
 const robotFlex = Roboto_Flex({
   weight: ["400", "500", "700"],
@@ -27,9 +29,11 @@ export default function RootLayout({
       <body className={robotFlex.className}>
         <AppContext>
           <AllModals />
+          <ToastProvider />
           <Header className="" />
           {children}
           <Footer className="" />
+          {/* </ToastProvider> */}
         </AppContext>
       </body>
     </html>

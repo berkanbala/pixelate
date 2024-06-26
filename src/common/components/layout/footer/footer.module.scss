@@ -1,6 +1,5 @@
 .container {
-  font-family: "RobotoCondensed Bold", "Trebuchet MS", Helvetica, Arial,
-    sans-serif;
+  font-family: serif;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -10,5 +9,8 @@
   padding: 10px;
   color: #000;
   background-color: aqua;
-  box-shadow: 0 4px 15px 0 rgba(116, 79, 168, 0.75);
+  box-shadow: 0 4px 15px 0 rgb(98 96 101 / 75%);
+
+  span {
+  }
 }

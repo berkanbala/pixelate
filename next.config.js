@@ -4,6 +4,7 @@ const nextConfig = {
     appDir: true,
   },
   images: {
+    // transpilePackages: ["lucide-react"],
     remotePatterns: [
       {
         // protocol: "http",

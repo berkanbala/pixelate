@@ -9,6 +9,9 @@ import { getInitalFormValues } from "@/common/shared/initialValues";
 import Image from "next/image";
 import IconX from "../../media/logo/x.png";
 import styles from "./signUpModal.module.scss";
+import IconLeft from "../../media/logo/arrow-big-left.svg";
+import { notify } from "@/common/configs/notify";
+
 export default function SignupModal() {
   const { modals } = useAppContext();
   const [form, setForm] = useForm(getInitalFormValues);
@@ -19,6 +22,9 @@ export default function SignupModal() {
     if (!validateForm(form)) {
       return;
     }
+    notify("success", "basarili bir sekilde kayıt oldunuz", {
+      position: "top-right",
+    });
 
     modals.setSignupModalVisible(false);
     modals.setSigninModalVisible(true);
@@ -26,20 +32,23 @@ export default function SignupModal() {
 
   const handlePropagation = (e: any) => e.stopPropagation();
   const handleSignUp = () => modals.setSignupModalVisible(false);
+  const handleSignIn = () => {
+    modals.setSignupModalVisible(false);
+    modals.setSigninModalVisible(true);
+  };
+  // const handleSignIn = () => modals.setSigninModalVisible(true);
 
   if (!modals.signupModalVisible) return null;
 
   return (
     <div className={styles.container}>
       <div className={styles.content} onClick={handlePropagation}>
-        <div className={styles.modalTitle}>
-          <h1>Üye Ol</h1>
-        </div>
+        <div className={styles.modalTitle}>Üye Ol</div>
         <form onSubmit={handleSubmit}>
           <Input
             type="text"
             name="email"
-            placeholder="email"
+            placeholder="Email"
             value={form.email}
             onChange={setForm}
           />
@@ -58,6 +67,15 @@ export default function SignupModal() {
             className={styles.close}
             src={IconX}
             alt="closeButton"
+            width={45}
+            height={45}
+          />
+
+          <Image
+            onClick={handleSignIn}
+            className={styles.left}
+            src={IconLeft}
+            alt="arrowLeft"
             width={45}
             height={45}
           />
