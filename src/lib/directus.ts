@@ -1,8 +1,8 @@
-import { createDirectus, deleteItem, rest } from "@directus/sdk";
+import { createDirectus, rest } from "@directus/sdk";
 
-const directus = createDirectus("http://localhost:8055").with(
+const directus = createDirectus("http://localhost:8055/").with(
   rest({
-    onRequest: (options) => ({ ...options } as any),
+    onRequest: (options) => ({ ...options, cache: "no-store" }),
   })
 );
 

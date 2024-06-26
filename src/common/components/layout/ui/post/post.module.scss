@@ -1,0 +1,37 @@
+.container {
+  box-shadow: 0px 2px 1px 0px rgba(94, 94, 111, 0.107),
+    0px -1px 1px 1px rgba(31, 30, 30, 0.119) inset,
+    0px 0px 0px 1px rgba(99, 106, 121, 0.195) inset;
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  width: 100%;
+
+  img {
+    margin-right: 20px;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    .title {
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    .description {
+      font-size: 12px;
+      width: max-content;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      max-width: 220px;
+    }
+
+    .date {
+      font-size: 12px;
+    }
+  }
+}

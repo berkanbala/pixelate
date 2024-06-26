@@ -1,5 +1,12 @@
-import PostPageDetail from "@/pages/postPageDetail/postPageDetail";
+import directus from "@/lib/directus";
+import PostDetail from "@/pages/postDetail/postDetail";
+import { readItems } from "@directus/sdk";
 
-export default function Index({ params }: { params: { id: string } }) {
-  return <PostPageDetail id={params.id} />;
+async function getGlobals(id: string) {
+  return directus.request(readItems(`posts/${id}`));
+}
+export default async function Index({ params }: { params: { id: string } }) {
+  const global: any = await getGlobals(params.id);
+
+  return <PostDetail data={global} />;
 }
