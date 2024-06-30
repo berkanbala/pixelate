@@ -1,7 +1,7 @@
 "use client";
-import { Calendar } from "lucide-react";
-import styles from "./postDetail.module.scss";
 import Image from "next/image";
+import styles from "./postDetail.module.scss";
+import { Calendar } from "lucide-react";
 import { formatDate, parseISO } from "date-fns";
 
 export default function PostDetail({ data }: any) {

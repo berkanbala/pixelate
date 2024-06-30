@@ -1,3 +1,5 @@
+@import "../../../assets/styles/variable.scss";
+
 .container {
   font-family: serif;
   display: flex;
@@ -7,10 +9,7 @@
   position: fixed;
   width: 100%;
   padding: 10px;
-  color: #000;
-  background-color: aqua;
-  box-shadow: 0 4px 15px 0 rgb(98 96 101 / 75%);
-
-  span {
-  }
+  color: $black;
+  background-color: $blue2;
+  box-shadow: 0 4px 15px 0 $brown2;
 }

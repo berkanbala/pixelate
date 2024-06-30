@@ -1,16 +1,16 @@
 "use client";
 
+import Image from "next/image";
+import IconX from "@/common/assets/media/logo/x.png";
+import styles from "./signUpModal.module.scss";
+import IconLeft from "@/common/assets/media/logo/arrow-big-left.svg";
 import { Input } from "@/common/components/layout/ui/input/input";
+import { notify } from "@/common/configs/notify";
 import { Button } from "@/common/components/layout/ui/button/button";
 import { useForm } from "@/common/hooks/useForm";
 import { validateForm } from "@/common/hooks/validation";
 import { useAppContext } from "@/common/context/appContext";
 import { getInitalFormValues } from "@/common/shared/initialValues";
-import Image from "next/image";
-import IconX from "../../media/logo/x.png";
-import styles from "./signUpModal.module.scss";
-import IconLeft from "../../media/logo/arrow-big-left.svg";
-import { notify } from "@/common/configs/notify";
 
 export default function SignupModal() {
   const { modals } = useAppContext();
@@ -36,7 +36,6 @@ export default function SignupModal() {
     modals.setSignupModalVisible(false);
     modals.setSigninModalVisible(true);
   };
-  // const handleSignIn = () => modals.setSigninModalVisible(true);
 
   if (!modals.signupModalVisible) return null;
 

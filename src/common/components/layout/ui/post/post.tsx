@@ -1,7 +1,7 @@
+import Link from "next/link";
 import Image from "next/image";
 import styles from "./post.module.scss";
 import classNames from "classnames";
-import Link from "next/link";
 
 export default function Post({ item, className }: any) {
   return (

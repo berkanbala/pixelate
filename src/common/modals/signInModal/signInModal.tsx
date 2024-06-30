@@ -1,14 +1,14 @@
 "use client";
+import Image from "next/image";
+import IconX from "@/common/assets/media/logo/x.png";
+import styles from "./signInModal.module.scss";
 import { Input } from "@/common/components/layout/ui/input/input";
 import { Button } from "@/common/components/layout/ui/button/button";
+import { notify } from "@/common/configs/notify";
 import { useForm } from "@/common/hooks/useForm";
 import { validateForm } from "@/common/hooks/validation";
 import { useAppContext } from "@/common/context/appContext";
 import { getInitalFormValues } from "@/common/shared/initialValues";
-import Image from "next/image";
-import IconX from "../../media/logo/x.png";
-import styles from "./signInModal.module.scss";
-import { notify } from "@/common/configs/notify";
 
 export default function SigninModal() {
   const { modals, user } = useAppContext();
@@ -26,7 +26,7 @@ export default function SigninModal() {
     console.log(notify);
 
     user.setUsers(form.email);
-    resetForm(); // Formu sıfırla
+    resetForm();
     user.setAuth(true);
     modals.setSigninModalVisible(false);
   };

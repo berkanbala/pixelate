@@ -1,12 +1,11 @@
 import type { Metadata } from "next";
 import { Roboto_Flex } from "next/font/google";
-import { Header } from "@/common/components/layout/header/header";
 import { AppContext } from "@/common/context/appContext";
+import { Header } from "@/common/components/layout/header/header";
 import Footer from "@/common/components/layout/footer/footer";
 import AllModals from "@/common/modals/allModals/allModals";
-import "../styles/global.scss";
-import { ToastContainer } from "react-toastify";
 import ToastProvider from "@/common/context/toastProvider";
+import "@/common/assets/styles/global.scss";
 
 const robotFlex = Roboto_Flex({
   weight: ["400", "500", "700"],
@@ -33,7 +32,6 @@ export default function RootLayout({
           <Header className="" />
           {children}
           <Footer className="" />
-          {/* </ToastProvider> */}
         </AppContext>
       </body>
     </html>

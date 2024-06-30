@@ -1,3 +1,5 @@
+@import "../../common/assets/styles/variable.scss";
+
 .container {
   display: flex;
   flex-direction: column;
@@ -16,7 +18,7 @@
 
     .post {
       margin-bottom: 20px;
-      background-color: azure;
+      background-color: $white;
     }
   }
 }

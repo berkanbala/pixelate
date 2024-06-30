@@ -1,11 +1,10 @@
+@import "../../common/assets/styles/variable.scss";
+
 %boxshadow {
-  box-shadow: 4px 4px 9.6px #a09999, 0 8px 18px #000000;
+  box-shadow: 4px 4px 9.6px $grey, 0 8px 18px $black;
 }
 
 .container {
-  //   box-shadow: 0px 2px 1px 0px rgba(94, 94, 111, 0.107),
-  //     0px -1px 1px 1px rgba(31, 30, 30, 0.119) inset,
-  //     0px 0px 0px 1px rgba(99, 106, 121, 0.195) inset;
   padding: 10px;
   border-radius: 10px;
   display: flex;
@@ -13,7 +12,7 @@
   flex-direction: column;
   align-items: center;
   margin: 0px 188px;
-  background-color: azure;
+  background-color: $white;
 
   @extend %boxshadow;
 
@@ -31,7 +30,7 @@
     .icon {
       width: 1rem;
       height: 1rem;
-      color: #9ca3af;
+      color: $grey1;
     }
   }
 

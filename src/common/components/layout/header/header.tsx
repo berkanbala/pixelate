@@ -1,11 +1,11 @@
 "use client";
 import Link from "next/link";
-import styles from "./header.module.scss";
+import Logo from "@/common/assets/media/logo/logo.svg";
 import Image from "next/image";
-import Logo from "@/common/media/logo/logo.svg";
+import styles from "./header.module.scss";
 import classNames from "classnames";
-import { useAppContext } from "@/common/context/appContext";
 import { notify } from "@/common/configs/notify";
+import { useAppContext } from "@/common/context/appContext";
 
 export const Header = (props: Props) => {
   const { className } = props;
