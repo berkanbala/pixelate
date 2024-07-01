@@ -8,7 +8,7 @@ export default function PostDetail({ data }: any) {
   return (
     <div className={styles.container}>
       <Image
-        src={`${process.env.NEXT_PUBLIC_APP_ASSETS_URL}${data.post_image}`}
+        src={`${process.env.NEXT_PUBLIC_APP_ASSETS_URL}${data?.post_image}`}
         alt="postImage"
         width={400}
         height={200}
