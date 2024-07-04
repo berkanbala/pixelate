@@ -8,4 +8,4 @@ services:
     #   - ./database:/directus/database
     #   - ./uploads:/directus/uploads
     env_file:
-      - ../.env.development
+      - .env.development
