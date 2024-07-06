@@ -1,10 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: "standalone",
   images: {
-    // transpilePackages: ["lucide-react"],
     remotePatterns: [
       {
-        // protocol: "http",
+        protocol: "http",
         hostname: "localhost",
         port: "8055",
         pathname: "/assets/**",
