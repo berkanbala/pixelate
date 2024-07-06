@@ -1,3 +1,5 @@
+"use client";
+
 import { createDirectus, rest } from "@directus/sdk";
 
 const directus = createDirectus("http://localhost:8055/").with(
