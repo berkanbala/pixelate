@@ -1,11 +1,7 @@
 version: '3'
 
 services:
-  app:
-    build:
-      context: .
-      dockerfile: Dockerfile
-directus:
+  directus:
     image: directus/directus:10.12.1
     ports:
       - 8055:8055
